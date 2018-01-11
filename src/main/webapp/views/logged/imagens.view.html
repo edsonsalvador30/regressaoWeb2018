@@ -50,7 +50,7 @@
                 <td class="">
                     <div class="">
                                 <a ng-if="rowData.imagem_bd" ng-click="datasource.openImage(rowData.imagem_bd)">
-                                    <img data-ng-src="{{rowData.imagem_bd.startsWith('http') || (rowData.imagem_bd.startsWith('/') && rowData.imagem_bd.length < 1000)? rowData.imagem_bd : 'data:image/png;base64,' + rowData.imagem_bd}}" style="max-height: 30px;">
+                                    <img data-ng-src="{{rowData.imagem_bd.startsWith('http') || (rowData.imagem_bd.startsWith('/') &amp;&amp; rowData.imagem_bd.length < 1000)? rowData.imagem_bd : 'data:image/png;base64,' + rowData.imagem_bd}}" style="max-height: 30px;">
                                 </a>
                     </div>
                 </td>
@@ -64,7 +64,7 @@
                 <td class="">
                     <div class="">
                                 <a ng-if="rowData.imagem_drop" ng-click="datasource.openImage(rowData.imagem_drop)">
-                                    <img data-ng-src="{{rowData.imagem_drop.startsWith('http') || (rowData.imagem_drop.startsWith('/') && rowData.imagem_drop.length < 1000)? rowData.imagem_drop : 'data:image/png;base64,' + rowData.imagem_drop}}" style="max-height: 30px;">
+                                    <img data-ng-src="{{rowData.imagem_drop.startsWith('http') || (rowData.imagem_drop.startsWith('/') &amp;&amp; rowData.imagem_drop.length < 1000)? rowData.imagem_drop : 'data:image/png;base64,' + rowData.imagem_drop}}" style="max-height: 30px;">
                                 </a>
                     </div>
                 </td>
@@ -78,7 +78,7 @@
                 <td class="">
                     <div class="">
                                 <a ng-if="rowData.imagem2_bd" ng-click="datasource.openImage(rowData.imagem2_bd)">
-                                    <img data-ng-src="{{rowData.imagem2_bd.startsWith('http') || (rowData.imagem2_bd.startsWith('/') && rowData.imagem2_bd.length < 1000)? rowData.imagem2_bd : 'data:image/png;base64,' + rowData.imagem2_bd}}" style="max-height: 30px;">
+                                    <img data-ng-src="{{rowData.imagem2_bd.startsWith('http') || (rowData.imagem2_bd.startsWith('/') &amp;&amp; rowData.imagem2_bd.length < 1000)? rowData.imagem2_bd : 'data:image/png;base64,' + rowData.imagem2_bd}}" style="max-height: 30px;">
                                 </a>
                     </div>
                 </td>
@@ -92,7 +92,7 @@
                 <td class="">
                     <div class="">
                                 <a ng-if="rowData.imagem2_drop" ng-click="datasource.openImage(rowData.imagem2_drop)">
-                                    <img data-ng-src="{{rowData.imagem2_drop.startsWith('http') || (rowData.imagem2_drop.startsWith('/') && rowData.imagem2_drop.length < 1000)? rowData.imagem2_drop : 'data:image/png;base64,' + rowData.imagem2_drop}}" style="max-height: 30px;">
+                                    <img data-ng-src="{{rowData.imagem2_drop.startsWith('http') || (rowData.imagem2_drop.startsWith('/') &amp;&amp; rowData.imagem2_drop.length < 1000)? rowData.imagem2_drop : 'data:image/png;base64,' + rowData.imagem2_drop}}" style="max-height: 30px;">
                                 </a>
                     </div>
                 </td>
@@ -131,91 +131,91 @@
                 <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
                 <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
             </div>
-            <br/>
+            <br>
             <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
 
-                <div data-component="crn-dynamic-image" id="crn-textinput-imagem_bd" class="">
+                <div data-component="crn-dynamic-image" id="crn-textinput-imagem_bd" class="col-md-2">
                     <div class="form-group">
                         <label for="textinput-imagem_bd" class="">Imagem_bd</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <div dynamic-image ng-model="Imagens.active.imagem_bd" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                <div dynamic-image="" ng-model="Imagens.active.imagem_bd" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
                                   {{"template.crud.clickOrDragAnImage" | translate}} 
                                 </div>
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-dynamic-file" id="crn-textinput-arquivo_bd" class="">
+                <div data-component="crn-dynamic-file" id="crn-textinput-arquivo_bd" class="col-md-2">
                     <div class="form-group">
                         <label for="textinput-arquivo_bd" class="">Arquivo_bd</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <div dynamic-file ng-model="Imagens.active.arquivo_bd" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                <div dynamic-file="" ng-model="Imagens.active.arquivo_bd" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
                                   {{"template.crud.clickOrDragAnFile" | translate}}
                                 </div>
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-dynamic-image" id="crn-textinput-imagem_drop" class="">
+                <div data-component="crn-dynamic-image" id="crn-textinput-imagem_drop" class="col-md-2">
                     <div class="form-group">
                         <label for="textinput-imagem_drop" class="">Imagem _drop</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <div dynamic-image ng-model="Imagens.active.imagem_drop" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                <div dynamic-image="" ng-model="Imagens.active.imagem_drop" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
                                   {{"template.crud.clickOrDragAnImage" | translate}} 
                                 </div>
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-dynamic-file" id="crn-textinput-arquivo_drop" class="">
+                <div data-component="crn-dynamic-file" id="crn-textinput-arquivo_drop" class="col-md-2">
                     <div class="form-group">
                         <label for="textinput-arquivo_drop" class="">Arquivo _drop</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <div dynamic-file ng-model="Imagens.active.arquivo_drop" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                <div dynamic-file="" ng-model="Imagens.active.arquivo_drop" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
                                   {{"template.crud.clickOrDragAnFile" | translate}}
                                 </div>
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-dynamic-image" id="crn-textinput-imagem2_bd" class="">
+                <div data-component="crn-dynamic-image" id="crn-textinput-imagem2_bd" class="col-md-2">
                     <div class="form-group">
                         <label for="textinput-imagem2_bd" class="">Imagem 2_bd</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <div dynamic-image ng-model="Imagens.active.imagem2_bd" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                <div dynamic-image="" ng-model="Imagens.active.imagem2_bd" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
                                   {{"template.crud.clickOrDragAnImage" | translate}} 
                                 </div>
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-dynamic-file" id="crn-textinput-arquivo2_bd" class="">
+                <div data-component="crn-dynamic-file" id="crn-textinput-arquivo2_bd" class="col-md-2">
                     <div class="form-group">
                         <label for="textinput-arquivo2_bd" class="">Arquivo 2_bd</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <div dynamic-file ng-model="Imagens.active.arquivo2_bd" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                <div dynamic-file="" ng-model="Imagens.active.arquivo2_bd" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
                                   {{"template.crud.clickOrDragAnFile" | translate}}
                                 </div>
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-dynamic-image" id="crn-textinput-imagem2_drop" class="">
+                <div data-component="crn-dynamic-image" id="crn-textinput-imagem2_drop" class="col-md-2">
                     <div class="form-group">
                         <label for="textinput-imagem2_drop" class="">Imagem 2_drop</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <div dynamic-image ng-model="Imagens.active.imagem2_drop" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                <div dynamic-image="" ng-model="Imagens.active.imagem2_drop" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
                                   {{"template.crud.clickOrDragAnImage" | translate}} 
                                 </div>
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-dynamic-file" id="crn-textinput-arquivo2_drop" class="">
+                <div data-component="crn-dynamic-file" id="crn-textinput-arquivo2_drop" class="col-md-2">
                     <div class="form-group">
                         <label for="textinput-arquivo2_drop" class="">Arquivo 2_drop</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <div dynamic-file ng-model="Imagens.active.arquivo2_drop" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                <div dynamic-file="" ng-model="Imagens.active.arquivo2_drop" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
                                   {{"template.crud.clickOrDragAnFile" | translate}}
                                 </div>
                          <!-- end if !model.hasCronappFramework() -->
