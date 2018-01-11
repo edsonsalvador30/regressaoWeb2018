@@ -1,0 +1,239 @@
+<h3>Imagens</h3>
+
+<!-- div row para pesquisa -->
+<!--<div class="row">-->
+
+
+<div data-component="crn-button" id="crn-button-564202" class="">
+    <button class="btn btn-primary" type="submit" onclick="" data-component="crn-button" ng-click="Imagens.startInserting()" ng-hide="Imagens.inserting || Imagens.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button>
+</div>
+<!-- fim div row para pesquisa -->
+<!--</div>-->
+
+<datasource filter="" name="Imagens" entity="api/cronapi/crud/app.entity.Imagens" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
+<div class="component-holder" data-component="crn-grid" id="crn-grid-Imagens">
+    <div crn-datasource="Imagens" class="" ng-hide="Imagens.editing || Imagens.inserting">
+        <table class="table  table-bordered table-hover table-striped">
+            <thead>
+            <tr class="table-header">
+                <th class="">
+                    <div class="">Imagem_bd</div>
+                </th>
+                <th class="">
+                    <div class="">Arquivo_bd</div>
+                </th>
+                <th class="">
+                    <div class="">Imagem _drop</div>
+                </th>
+                <th class="">
+                    <div class="">Arquivo _drop</div>
+                </th>
+                <th class="">
+                    <div class="">Imagem 2_bd</div>
+                </th>
+                <th class="">
+                    <div class="">Arquivo 2_bd</div>
+                </th>
+                <th class="">
+                    <div class="">Imagem 2_drop</div>
+                </th>
+                <th class="">
+                    <div class="">Arquivo 2_drop</div>
+                </th>
+                <th class="">
+                    <div class="">{{"template.crud.actions" | translate}}</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-content" ng-repeat="rowData in datasource.data">
+                <td class="">
+                    <div class="">
+                                <a ng-if="rowData.imagem_bd" ng-click="datasource.openImage(rowData.imagem_bd)">
+                                    <img data-ng-src="{{rowData.imagem_bd.startsWith('http') || (rowData.imagem_bd.startsWith('/') && rowData.imagem_bd.length < 1000)? rowData.imagem_bd : 'data:image/png;base64,' + rowData.imagem_bd}}" style="max-height: 30px;">
+                                </a>
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                    <button ng-if="rowData.arquivo_bd" class="btn btn-sm" ng-click="cronapi.internal.downloadFileEntity(datasource, 'arquivo_bd', $index)">
+                                        <span class="glyphicon glyphicon-download-alt"></span>
+                                    </button>
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                <a ng-if="rowData.imagem_drop" ng-click="datasource.openImage(rowData.imagem_drop)">
+                                    <img data-ng-src="{{rowData.imagem_drop.startsWith('http') || (rowData.imagem_drop.startsWith('/') && rowData.imagem_drop.length < 1000)? rowData.imagem_drop : 'data:image/png;base64,' + rowData.imagem_drop}}" style="max-height: 30px;">
+                                </a>
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                    <button ng-if="rowData.arquivo_drop" class="btn btn-sm" ng-click="cronapi.internal.downloadFileEntity(datasource, 'arquivo_drop', $index)">
+                                        <span class="glyphicon glyphicon-download-alt"></span>
+                                    </button>
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                <a ng-if="rowData.imagem2_bd" ng-click="datasource.openImage(rowData.imagem2_bd)">
+                                    <img data-ng-src="{{rowData.imagem2_bd.startsWith('http') || (rowData.imagem2_bd.startsWith('/') && rowData.imagem2_bd.length < 1000)? rowData.imagem2_bd : 'data:image/png;base64,' + rowData.imagem2_bd}}" style="max-height: 30px;">
+                                </a>
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                    <button ng-if="rowData.arquivo2_bd" class="btn btn-sm" ng-click="cronapi.internal.downloadFileEntity(datasource, 'arquivo2_bd', $index)">
+                                        <span class="glyphicon glyphicon-download-alt"></span>
+                                    </button>
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                <a ng-if="rowData.imagem2_drop" ng-click="datasource.openImage(rowData.imagem2_drop)">
+                                    <img data-ng-src="{{rowData.imagem2_drop.startsWith('http') || (rowData.imagem2_drop.startsWith('/') && rowData.imagem2_drop.length < 1000)? rowData.imagem2_drop : 'data:image/png;base64,' + rowData.imagem2_drop}}" style="max-height: 30px;">
+                                </a>
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                    <button ng-if="rowData.arquivo2_drop" class="btn btn-sm" ng-click="cronapi.internal.downloadFileEntity(datasource, 'arquivo2_drop', $index)">
+                                        <span class="glyphicon glyphicon-download-alt"></span>
+                                    </button>
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.startEditing(rowData)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-footer-controls">
+            <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
+        </div>
+    </div>
+</div>
+<div data-component="crn-form" id="crn-form-form-Imagens">
+    <div class="form" ng-show="Imagens.editing || Imagens.inserting">
+        <form crn-datasource="Imagens" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.startInserting()"><i class="glyphicon glyphicon-plus-sign"></i></button>
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.startEditing()"><i class="glyphicon glyphicon-edit"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.remove()"><i class="glyphicon glyphicon-trash"></i></button>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
+                <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+            <br/>
+            <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+                <div data-component="crn-dynamic-image" id="crn-textinput-imagem_bd" class="">
+                    <div class="form-group">
+                        <label for="textinput-imagem_bd" class="">Imagem_bd</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <div dynamic-image ng-model="Imagens.active.imagem_bd" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                  {{"template.crud.clickOrDragAnImage" | translate}} 
+                                </div>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-dynamic-file" id="crn-textinput-arquivo_bd" class="">
+                    <div class="form-group">
+                        <label for="textinput-arquivo_bd" class="">Arquivo_bd</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <div dynamic-file ng-model="Imagens.active.arquivo_bd" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                  {{"template.crud.clickOrDragAnFile" | translate}}
+                                </div>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-dynamic-image" id="crn-textinput-imagem_drop" class="">
+                    <div class="form-group">
+                        <label for="textinput-imagem_drop" class="">Imagem _drop</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <div dynamic-image ng-model="Imagens.active.imagem_drop" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                  {{"template.crud.clickOrDragAnImage" | translate}} 
+                                </div>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-dynamic-file" id="crn-textinput-arquivo_drop" class="">
+                    <div class="form-group">
+                        <label for="textinput-arquivo_drop" class="">Arquivo _drop</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <div dynamic-file ng-model="Imagens.active.arquivo_drop" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                  {{"template.crud.clickOrDragAnFile" | translate}}
+                                </div>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-dynamic-image" id="crn-textinput-imagem2_bd" class="">
+                    <div class="form-group">
+                        <label for="textinput-imagem2_bd" class="">Imagem 2_bd</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <div dynamic-image ng-model="Imagens.active.imagem2_bd" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                  {{"template.crud.clickOrDragAnImage" | translate}} 
+                                </div>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-dynamic-file" id="crn-textinput-arquivo2_bd" class="">
+                    <div class="form-group">
+                        <label for="textinput-arquivo2_bd" class="">Arquivo 2_bd</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <div dynamic-file ng-model="Imagens.active.arquivo2_bd" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                  {{"template.crud.clickOrDragAnFile" | translate}}
+                                </div>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-dynamic-image" id="crn-textinput-imagem2_drop" class="">
+                    <div class="form-group">
+                        <label for="textinput-imagem2_drop" class="">Imagem 2_drop</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <div dynamic-image ng-model="Imagens.active.imagem2_drop" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                  {{"template.crud.clickOrDragAnImage" | translate}} 
+                                </div>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-dynamic-file" id="crn-textinput-arquivo2_drop" class="">
+                    <div class="form-group">
+                        <label for="textinput-arquivo2_drop" class="">Arquivo 2_drop</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <div dynamic-file ng-model="Imagens.active.arquivo2_drop" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                  {{"template.crud.clickOrDragAnFile" | translate}}
+                                </div>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+                <!-- NtoN  -->
+                <!-- NtoN  end-->
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <!-- OneToN -->
+                <!-- OneToOne  end -->
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+<!-- OneToOne modal -->
+<!-- OneToOne modal end-->

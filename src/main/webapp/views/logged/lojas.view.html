@@ -1,0 +1,294 @@
+<h3>lojas</h3>
+
+<!-- div row para pesquisa -->
+<!--<div class="row">-->
+
+    <div ng-hide="lojas.inserting || lojas.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class="">
+        <div class="form-group">
+            <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
+            <input type="text" ng-model="vars.search" cronapp-filter="nome;" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="lojas" class="form-control" value="" placeholder="{{'template.crud.search' | translate}}">
+        </div>
+    </div>
+
+<div data-component="crn-button" id="crn-button-564202" class="">
+    <button class="btn btn-primary" type="submit" onclick="" data-component="crn-button" ng-click="lojas.startInserting()" ng-hide="lojas.inserting || lojas.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button>
+</div>
+<!-- fim div row para pesquisa -->
+<!--</div>-->
+
+<datasource filter="" name="lojas" entity="api/cronapi/crud/app.entity.lojas" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
+<div class="component-holder" data-component="crn-grid" id="crn-grid-lojas">
+    <div crn-datasource="lojas" class="" ng-hide="lojas.editing || lojas.inserting">
+        <table class="table  table-bordered table-hover table-striped">
+            <thead>
+            <tr class="table-header">
+                <th class="">
+                    <div class="">Nome</div>
+                </th>
+                <th class="">
+                    <div class="">Endereco</div>
+                </th>
+                <th class="">
+                    <div class="">Cnpj</div>
+                </th>
+                <th class="">
+                    <div class="">CEP</div>
+                </th>
+                <th class="">
+                    <div class="">{{"template.crud.actions" | translate}}</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-content" ng-repeat="rowData in datasource.data">
+                <td class="">
+                    <div class="">
+                                {{rowData.nome  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.endereco  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cnpj | mask:'99.999.999/9999-99;0' }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cep | mask:'99999-999;0' }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.startEditing(rowData)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-footer-controls">
+            <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
+        </div>
+    </div>
+</div>
+<div data-component="crn-form" id="crn-form-form-lojas">
+    <div class="form" ng-show="lojas.editing || lojas.inserting">
+        <form crn-datasource="lojas" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.startInserting()"><i class="glyphicon glyphicon-plus-sign"></i></button>
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.startEditing()"><i class="glyphicon glyphicon-edit"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.remove()"><i class="glyphicon glyphicon-trash"></i></button>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
+                <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+            <br/>
+            <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+                <div data-component="crn-textinput" id="crn-textinput-nome" class="">
+                    <div class="form-group">
+                        <label for="textinput-nome" class="">Nome</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="lojas.active.nome"
+                                            class="form-control"
+                                            id="textinput-nome"
+                                            placeholder="Nome"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-endereco" class="">
+                    <div class="form-group">
+                        <label for="textinput-endereco" class="">Endereco</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="lojas.active.endereco"
+                                            class="form-control"
+                                            id="textinput-endereco"
+                                            placeholder="Endereco"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cnpj" class="">
+                    <div class="form-group">
+                        <label for="textinput-cnpj" class="">Cnpj</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="lojas.active.cnpj"
+                                            class="form-control"
+                                            id="textinput-cnpj"
+                                            placeholder="Cnpj"
+                                            mask="99.999.999/9999-99;0"
+                                            mask-placeholder=""
+                                            valid="cnpj"
+                                            data-error-message="{{'invalid.cnpj' | translate}}"
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cep" class="">
+                    <div class="form-group">
+                        <label for="textinput-cep" class="">CEP</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="lojas.active.cep"
+                                            class="form-control"
+                                            id="textinput-cep"
+                                            placeholder="CEP"
+                                            mask="99999-999;0"
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+                <!-- NtoN  -->
+                <datasource append="false" name="Estado" entity="api/cronapi/crud/app.entity.lojas/{{lojas.active.id}}/relation:estado:Estado" keys="id" rows-per-page="100" lazy="true" auto-post="true" enabled="{{lojas.editing || lojas.inserting}}"dependent-lazy-post="lojas" dependent-lazy-post-field="lojas"></datasource>
+                <datasource name="AllEstado" entity="api/cronapi/crud/app.entity.Estado" keys="id" rows-per-page="100" enabled="{{lojas.editing || lojas.inserting}}"></datasource>
+                    <div class="component-holder ng-binding ng-scope " data-component="crn-combobox" ng-show="datasource.editing || datasource.inserting" >
+                        <div class="form-group">
+                            <label for="select-ui">Estado</label>
+                            <div id="select-ui" data-component="crn-tags">
+                                <ui-select multiple crn-datasource="AllEstado" ng-model="Estado.data" class="crn-select" style="min-width: 200px" theme="bootstrap" enabled="{{lojas.editing || lojas.inserting }}" >
+                                    <ui-select-match placeholder="Estado...">
+                                        {{$item.nome }}
+                                    </ui-select-match>
+                                    <ui-select-choices repeat="rowData in datasource.data | filter : $select.search" class="">
+                                        <div class="" data-container="true" draggable="true">
+                                            {{rowData.nome}}
+                                        </div>
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
+                        </div>
+                    </div>
+                <!-- NtoN  end-->
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <!-- OneToN -->
+                <!--query filter 1toN -->
+                <!-- query filter 1toN end-->
+                <datasource filter="" name="lojasEstadoGrid" enabled="{{lojas.editing || lojas.inserting}}" entity="api/cronapi/crud/app.entity.lojas/{{lojas.active.id}}/relation:lojas:lojasEstado" keys="id" rows-per-page="100" lazy="true" auto-post="true" dependent-lazy-post="lojas" dependent-lazy-post-field="lojas"></datasource>
+                <div data-component="crn-button" class="">
+                    <button class="btn btn-primary" onclick="$('#modallojasEstadoGrid').modal('show');" data-component="crn-button" ng-click="lojasEstadoGrid.startInserting();"><i class="fa fa-plus"></i> <span class="">{{"Add" | translate}} lojasEstado</span> </button>
+                </div>
+                <!--search 1toN-->
+                <!-- seach 1toN end-->
+                <div data-component="crn-textinput" id="crn-textinput-descricao">
+                    <div class="form-group">
+                        <label for="textinput-descricao" class="">lojasEstado</label>
+                        <div class="component-holder" data-component="crn-grid" id="crn-grid-lojasEstadoGrid">
+                            <div crn-datasource="lojasEstadoGrid">
+                                <table class="table table-bordered table-hover table-striped">
+                                    <thead>
+                                    <tr class="table-header">
+                                                <th class="">
+                                                    <div class="">
+                                                        Estado
+                                                    </div>
+                                                </th>
+                                        <th class="">
+                                            <div class="">
+                                                {{"template.crud.actions" | translate}}
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="table-content" ng-repeat="rowData in datasource.data">
+                                                <td>
+                                                    <div>
+                                                            {{rowData.estado.nome }}
+                                                    </div>
+                                                </td>
+                                        <td>
+                                            <div>
+                                                <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.startEditing(rowData)" onclick="$('#modallojasEstadoGrid').modal('show');" ><i class="fa fa-edit"></i></button>
+                                                <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="table-footer-controls">
+                                    <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()" content="{{&quot;template.crud.load_more&quot; | translate}}...">{{"template.crud.load_more" | translate}}...</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- OneToOne  end -->
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+<!-- OneToOne modal -->
+<div class="modal fade" id="modallojasEstadoGrid">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">lojasEstado</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="list-group list-group-sm row">
+<!-- else of !model.hasCronappFramework() -->
+                             <!-- end if !model.hasCronappFramework() -->
+
+<!-- else of !model.hasCronappFramework() -->
+                             <!-- end if !model.hasCronappFramework() -->
+
+<!-- else of !model.hasCronappFramework() -->
+                                        <datasource name="EstadoGridForUiSelect" entity="api/cronapi/crud/app.entity.Estado" keys="id" rows-per-page="100" lazy="true" enabled="{{lojas.editing || lojas.inserting}}" ></datasource>
+                                        <div data-component="crn-combobox-dynamic" id="crn-combobox-lojasEstadoGrid.active.estado" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <div class="form-group">
+                                                <label for="combobox-estado" class="">Estado</label>
+                                                <ui-select ng-model="lojasEstadoGrid.active.estado" crn-datasource="EstadoGridForUiSelect" class="crn-select" id="combobox-estado" ng-required="false" ng-disabled="disabled" theme="bootstrap" >
+                                                    <ui-select-match placeholder="Select..." class="">
+                                                        {{$select.selected.nome}}
+                                                    </ui-select-match>
+                                                    <ui-select-choices repeat="rowData in datasource.data | filter : $select.search" class="" refresh="" refresh-deplay="">
+                                                        <div class="">
+                                                            {{rowData.nome}}
+                                                        </div>
+                                                    </ui-select-choices>
+                                                </ui-select>
+                                            </div>
+                                        </div>
+                             <!-- end if !model.hasCronappFramework() -->
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-component="crn-button" ng-click="lojasEstadoGrid.post();" onclick="(!lojasEstadoGrid.missingRequiredField()?$('#modallojasEstadoGrid').modal('hide'):void(0))">{{'Save' | translate}}</button>
+                    <button type="button" class="btn btn-default" data-component="crn-button" data-dismiss="modal">{{'Home.view.Close' | translate}}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- OneToOne modal end-->
