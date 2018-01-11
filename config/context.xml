@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?><Context>
-    <Resource accessToUnderlyingConnectionAllowed="false" driverClassName="com.mysql.jdbc.Driver" logAbandoned="true" name="jdbc/Regressao20181" password="pnr3156ro2o9n04q" profile="DEV" removeAbandoned="false" removeAbandonedTimeout="60" schema="" type="javax.sql.DataSource" url="jdbc:mysql://rds-oncronos-shared.cx8gelec2ybx.us-east-1.rds.amazonaws.com:3306/4794120a-da97-493c-ae31-56eb2b9a04da" username="4794120nqn97493p"/>
+    <Resource accessToUnderlyingConnectionAllowed="false" driverClassName="com.mysql.jdbc.Driver" logAbandoned="true" name="jdbc/Regressao20181" password="783o83q14np72584" profile="DEV" removeAbandoned="false" removeAbandonedTimeout="60" schema="" type="javax.sql.DataSource" url="jdbc:mysql://rds-oncronos-shared.cx8gelec2ybx.us-east-1.rds.amazonaws.com:3306/32d76516-8f39-40b7-83b8-3d14ac725841" username="32q765168s3940o7"/>
     <Profile value="DEV"/>
 </Context>

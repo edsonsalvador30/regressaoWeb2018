@@ -58,9 +58,10 @@ public class Funcionarios implements Serializable {
   /**
   * @generated
   */
+  @Temporal(TemporalType.DATE)
   @Column(name = "nascimento", nullable = true, unique = false, insertable=true, updatable=true)
   
-  private java.lang.String nascimento;
+  private java.util.Date nascimento;
 
   /**
   * @generated
@@ -163,7 +164,7 @@ public class Funcionarios implements Serializable {
    * @generated
    */
   
-  public java.lang.String getNascimento(){
+  public java.util.Date getNascimento(){
     return this.nascimento;
   }
 
@@ -172,7 +173,7 @@ public class Funcionarios implements Serializable {
    * @param nascimento nascimento
    * @generated
    */
-  public Funcionarios setNascimento(java.lang.String nascimento){
+  public Funcionarios setNascimento(java.util.Date nascimento){
     this.nascimento = nascimento;
     return this;
   }
