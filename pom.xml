@@ -152,11 +152,6 @@
         </dependency>
         <dependency>
             <groupId>io.cronapp</groupId>
-            <artifactId>cronapi-java</artifactId>
-            <version>0.0.125-d-s-b</version>
-        </dependency>
-        <dependency>
-            <groupId>io.cronapp</groupId>
             <artifactId>cronapp-framework-java</artifactId>
             <version>0.0.38-d-s-b</version>
         </dependency>
@@ -169,6 +164,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.35</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cronapp</groupId>
+            <artifactId>cronapi-java</artifactId>
+            <version>0.0.129-d-s</version>
         </dependency>
     </dependencies>
     <properties>

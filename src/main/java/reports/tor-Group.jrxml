@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tor-Group" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="322f4b4a-410b-4e9a-b1bb-00e9c12dc55a">
+	<property name="zoom.factor" value="50.0"/>
+	<property name="DATASOURCE" value="jdbc/Regressao20181"/>
+	<property name="REPORT_DATASET" value="[{&quot;name&quot;:&quot;TOR-SET&quot;,&quot;j4CDataset&quot;:{&quot;datasetType&quot;:&quot;DATASOURCE&quot;,&quot;freeQuery&quot;:true,&quot;jndiConnection&quot;:&quot;jdbc/Regressao20181&quot;,&quot;sql&quot;:&quot;SELECT\n    `ESTADO`.nome as estado_nome,\n    `CIDADE`.nome as cidade_nome\nFROM\n    `CIDADE` ,\n    `ESTADO` \nWHERE\n    `ESTADO`.id \u003d `CIDADE`.fk_estado \nORDER BY estado_nome&quot;,&quot;recordLimit&quot;:10,&quot;tables&quot;:[{&quot;name&quot;:&quot;CIDADE&quot;}],&quot;joins&quot;:[{&quot;right&quot;:{&quot;parent&quot;:{&quot;name&quot;:&quot;CIDADE&quot;},&quot;name&quot;:&quot;fk_estado&quot;},&quot;operator&quot;:&quot;EQUALS&quot;,&quot;left&quot;:{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTADO&quot;},&quot;name&quot;:&quot;id&quot;}}],&quot;columns&quot;:[{&quot;parent&quot;:{&quot;name&quot;:&quot;CIDADE&quot;},&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTADO&quot;},&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;VARCHAR&quot;}],&quot;wheres&quot;:[],&quot;persistenceUnitName&quot;:&quot;app&quot;},&quot;main&quot;:true}]"/>
+	<queryString>
+		<![CDATA[SELECT
+    `ESTADO`.nome as estado_nome,
+    `CIDADE`.nome as cidade_nome
+FROM
+    `CIDADE` ,
+    `ESTADO` 
+WHERE
+    `ESTADO`.id = `CIDADE`.fk_estado 
+ORDER BY estado_nome]]>
+	</queryString>
+	<field name="COLUMN_2" class="java.lang.String">
+		<fieldDescription><![CDATA[cidade_nome]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[estado_nome]]></fieldDescription>
+	</field>
+	<group name="ESTADO">
+		<groupExpression><![CDATA[$F{nome}]]></groupExpression>
+		<groupHeader>
+			<band height="23" splitType="Immediate">
+				<textField evaluationTime="Auto">
+					<reportElement mode="Transparent" x="0" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="ce458b9c-616f-40f3-9da9-14017dcd14cf"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<title>
+		<band height="79"/>
+	</title>
+	<pageHeader>
+		<band height="35"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="90aec21c-20c6-4e07-a41c-9292715ddd50"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[estado_nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="100" height="20" uuid="e9c07997-30cd-4863-aedf-fc854826794b"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[cidade_nome]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<rectangle radius="0">
+				<reportElement stretchType="ElementGroupBottom" mode="Opaque" x="108" y="0" width="107" height="18" isPrintInFirstWholeBand="true" forecolor="#000000" backcolor="#FFFFFF" uuid="c8230c49-a982-440d-ad41-fe11dfd5f904"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement mode="Transparent" x="111" y="0" width="100" height="19" forecolor="#000000" backcolor="#FFFFFF" uuid="7ec9bca6-ec86-44ac-9656-c5857e5fd13f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COLUMN_2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54"/>
+	</pageFooter>
+	<summary>
+		<band height="42"/>
+	</summary>
+</jasperReport>
