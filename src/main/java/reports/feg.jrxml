@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="feg" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="00d818d0-10dd-4a7f-b9fe-6c49552af190">
+	<property name="zoom.factor" value="50.0"/>
+	<property name="DATASOURCE" value="jdbc/Regressao20181"/>
+	<property name="REPORT_DATASET" value="[{&quot;name&quot;:&quot;CIDADE_ESTADO&quot;,&quot;j4CDataset&quot;:{&quot;datasetType&quot;:&quot;DATASOURCE&quot;,&quot;freeQuery&quot;:true,&quot;jndiConnection&quot;:&quot;jdbc/Regressao20181&quot;,&quot;sql&quot;:&quot;SELECT\n    `CIDADE`.nome ,\n    `ESTADO`.nome \nFROM\n    `CIDADE` ,\n    `ESTADO` \nWHERE\n    `ESTADO`.id \u003d `CIDADE`.fk_estado &quot;,&quot;recordLimit&quot;:10,&quot;tables&quot;:[{&quot;name&quot;:&quot;CIDADE&quot;}],&quot;joins&quot;:[{&quot;right&quot;:{&quot;parent&quot;:{&quot;name&quot;:&quot;CIDADE&quot;},&quot;name&quot;:&quot;fk_estado&quot;},&quot;operator&quot;:&quot;EQUALS&quot;,&quot;left&quot;:{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTADO&quot;},&quot;name&quot;:&quot;id&quot;}}],&quot;columns&quot;:[{&quot;parent&quot;:{&quot;name&quot;:&quot;CIDADE&quot;},&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;VARCHAR&quot;},{&quot;parent&quot;:{&quot;name&quot;:&quot;ESTADO&quot;},&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;VARCHAR&quot;}],&quot;wheres&quot;:[],&quot;persistenceUnitName&quot;:&quot;app&quot;},&quot;main&quot;:true}]"/>
+	<queryString>
+		<![CDATA[SELECT
+    `CIDADE`.nome ,
+    `ESTADO`.nome 
+FROM
+    `CIDADE` ,
+    `ESTADO` 
+WHERE
+    `ESTADO`.id = `CIDADE`.fk_estado ]]>
+	</queryString>
+	<field name="COLUMN_2" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<group name="TESTE">
+		<groupExpression><![CDATA[$F{COLUMN_2}]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<textField evaluationTime="Auto">
+					<reportElement mode="Transparent" x="119" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="d3fe9e0e-9ae6-4841-8f9d-0486b1e5847c"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{COLUMN_2}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<title>
+		<band height="34"/>
+	</title>
+	<pageHeader>
+		<band height="35"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="c7d5aa92-d09b-418b-a5eb-bd5b12c1deb7"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="0" width="100" height="20" uuid="9e98e758-35e6-47b7-afcd-6f296ce0c6ce"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33">
+			<textField evaluationTime="Auto">
+				<reportElement mode="Transparent" x="0" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="91a853f4-6924-4b8d-a7cb-93b9d5222b23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="31"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25"/>
+	</pageFooter>
+	<summary>
+		<band height="42"/>
+	</summary>
+</jasperReport>
