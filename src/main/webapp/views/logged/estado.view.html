@@ -1,4 +1,4 @@
-<h3>Estado 34</h3>
+<h3>Estado 2</h3>
 
 <!-- div row para pesquisa -->
 <!--<div class="row">-->
@@ -6,7 +6,7 @@
     <div ng-hide="Estado.inserting || Estado.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class="">
         <div class="form-group">
             <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
-            <input type="text" ng-model="vars.search" cronapp-filter="nome;" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="Estado" class="form-control" value="" placeholder="{{'template.crud.search' | translate}}">
+            <input type="text" ng-model="vars.search" cronapp-filter="nome;" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="Estado" class="form-control" value="" placeholder="{{'template.crud.search' | translate}}" ng-blur="blockly.js.blockly.Bloco.Executar()">
         </div>
     </div>
 
