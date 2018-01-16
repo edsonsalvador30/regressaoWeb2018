@@ -1,4 +1,4 @@
-<h3>Estado</h3>
+<h3>Estado 34</h3>
 
 <!-- div row para pesquisa -->
 <!--<div class="row">-->
@@ -73,22 +73,14 @@
                 <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
                 <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
             </div>
-            <br/>
+            <br>
             <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
 
                 <div data-component="crn-textinput" id="crn-textinput-nome" class="">
                     <div class="form-group">
                         <label for="textinput-nome" class="">Nome</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <input
-                                            type="text"
-                                            ng-model="Estado.active.nome"
-                                            class="form-control"
-                                            id="textinput-nome"
-                                            placeholder="Nome"
-                                            mask=""
-                                            mask-placeholder=""
-                                            ng-required="false">
+                                <input type="text" ng-model="Estado.active.nome" class="form-control" id="textinput-nome" placeholder="Nome" mask="" mask-placeholder="" ng-required="false">
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
@@ -102,7 +94,7 @@
                                     <ui-select-match class="" placeholder="Select...">
                                         {{$select.selected.nome}}
                                     </ui-select-match>
-                                    <ui-select-choices  repeat="rowData in datasource.data | filter : $select.search" class="" refresh="" refresh-deplay="">
+                                    <ui-select-choices repeat="rowData in datasource.data | filter : $select.search" class="" refresh="" refresh-deplay="">
                                         <div class="" data-container="true">
                                             {{rowData.nome}}
                                         </div>
@@ -112,13 +104,13 @@
                     </div>
                 </div>
                 <!-- NtoN  -->
-                <datasource append="false" name="lojas" entity="api/cronapi/crud/app.entity.Estado/{{Estado.active.id}}/relation:lojas:lojas" keys="id" rows-per-page="100" lazy="true" auto-post="true" enabled="{{Estado.editing || Estado.inserting}}"dependent-lazy-post="Estado" dependent-lazy-post-field="estado"></datasource>
+                <datasource append="false" name="lojas" entity="api/cronapi/crud/app.entity.Estado/{{Estado.active.id}}/relation:lojas:lojas" keys="id" rows-per-page="100" lazy="true" auto-post="true" enabled="{{Estado.editing || Estado.inserting}}" dependent-lazy-post="Estado" dependent-lazy-post-field="estado"></datasource>
                 <datasource name="Alllojas" entity="api/cronapi/crud/app.entity.lojas" keys="id" rows-per-page="100" enabled="{{Estado.editing || Estado.inserting}}"></datasource>
-                    <div class="component-holder ng-binding ng-scope " data-component="crn-combobox" ng-show="datasource.editing || datasource.inserting" >
+                    <div class="component-holder ng-binding ng-scope " data-component="crn-combobox" ng-show="datasource.editing || datasource.inserting">
                         <div class="form-group">
                             <label for="select-ui">Lojas</label>
                             <div id="select-ui" data-component="crn-tags">
-                                <ui-select multiple crn-datasource="Alllojas" ng-model="lojas.data" class="crn-select" style="min-width: 200px" theme="bootstrap" enabled="{{Estado.editing || Estado.inserting }}" >
+                                <ui-select multiple="" crn-datasource="Alllojas" ng-model="lojas.data" class="crn-select" style="min-width: 200px" theme="bootstrap" enabled="{{Estado.editing || Estado.inserting }}">
                                     <ui-select-match placeholder="lojas...">
                                         {{$item.nome }}
                                     </ui-select-match>
@@ -174,7 +166,7 @@
                                                 </td>
                                         <td>
                                             <div>
-                                                <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.startEditing(rowData)" onclick="$('#modalCidadeGrid').modal('show');" ><i class="fa fa-edit"></i></button>
+                                                <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.startEditing(rowData)" onclick="$('#modalCidadeGrid').modal('show');"><i class="fa fa-edit"></i></button>
                                                 <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
@@ -182,7 +174,7 @@
                                     </tbody>
                                 </table>
                                 <div class="table-footer-controls">
-                                    <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()" content="{{&quot;template.crud.load_more&quot; | translate}}...">{{"template.crud.load_more" | translate}}...</button>
+                                    <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
                                 </div>
                             </div>
                         </div>
@@ -225,7 +217,7 @@
                                                 </td>
                                         <td>
                                             <div>
-                                                <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.startEditing(rowData)" onclick="$('#modallojasEstadoGrid').modal('show');" ><i class="fa fa-edit"></i></button>
+                                                <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.startEditing(rowData)" onclick="$('#modallojasEstadoGrid').modal('show');"><i class="fa fa-edit"></i></button>
                                                 <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
@@ -233,7 +225,7 @@
                                     </tbody>
                                 </table>
                                 <div class="table-footer-controls">
-                                    <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()" content="{{&quot;template.crud.load_more&quot; | translate}}...">{{"template.crud.load_more" | translate}}...</button>
+                                    <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
                                 </div>
                             </div>
                         </div>
@@ -262,16 +254,10 @@
 
 <!-- else of !model.hasCronappFramework() -->
 
-                                    <div data-component="crn-textinput"  id="crn-textinput-nome" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div data-component="crn-textinput" id="crn-textinput-nome" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <div class="form-group">
                                             <label for="textinput-nome">Nome</label>
-                                                <input type="text"
-                                                       ng-model="CidadeGrid.active.nome" class="form-control"
-                                                       id="textinput-nome"
-                                                       placeholder="Nome"
-                                                       mask=""
-                                                       mask-placeholder=""
-                                                    ng-required="false">
+                                                <input type="text" ng-model="CidadeGrid.active.nome" class="form-control" id="textinput-nome" placeholder="Nome" mask="" mask-placeholder="" ng-required="false">
                                         </div>
                                     </div>
                              <!-- end if !model.hasCronappFramework() -->
@@ -303,11 +289,11 @@
                              <!-- end if !model.hasCronappFramework() -->
 
 <!-- else of !model.hasCronappFramework() -->
-                                        <datasource name="LojasGridForUiSelect" entity="api/cronapi/crud/app.entity.lojas" keys="id" rows-per-page="100" lazy="true" enabled="{{Estado.editing || Estado.inserting}}" ></datasource>
+                                        <datasource name="LojasGridForUiSelect" entity="api/cronapi/crud/app.entity.lojas" keys="id" rows-per-page="100" lazy="true" enabled="{{Estado.editing || Estado.inserting}}"></datasource>
                                         <div data-component="crn-combobox-dynamic" id="crn-combobox-lojasEstadoGrid.active.lojas" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                             <div class="form-group">
                                                 <label for="combobox-lojas" class="">Lojas</label>
-                                                <ui-select ng-model="lojasEstadoGrid.active.lojas" crn-datasource="LojasGridForUiSelect" class="crn-select" id="combobox-lojas" ng-required="false" ng-disabled="disabled" theme="bootstrap" >
+                                                <ui-select ng-model="lojasEstadoGrid.active.lojas" crn-datasource="LojasGridForUiSelect" class="crn-select" id="combobox-lojas" ng-required="false" ng-disabled="disabled" theme="bootstrap">
                                                     <ui-select-match placeholder="Select..." class="">
                                                         {{$select.selected.nome}}
                                                     </ui-select-match>
