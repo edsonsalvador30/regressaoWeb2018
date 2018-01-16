@@ -1,0 +1,1641 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="src/main/webapp/views/logged/pais.view.html" resourceType="JAVA" ruleDescription="Bloco" ruleName="Bloco" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
+  <metadata scale="0.36" scrollx="353.3276775163103" scrolly="-203.55999999999992" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-892" y="307">
+    <field name="NAME">Executar</field>
+    <comment h="80" pinned="false" w="160">Bloco</comment>
+    <statement name="STACK">
+      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Efcit)79{Hdja_@?`:i=" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field name="VAR">item</field>
+        <value name="VALUE">
+          <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?`VP]Rh=DptSkFzZ!n+4" multilayer="false" namespace="cronapi.screen.Operations.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.JSON" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Json%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.Operations.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.screen.Operations.getValueOfField}}">
+              <arg cronapi-type="ObjectType.STRING" name="Campo"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Fn?%MZ:KcFkRNf2fgj3~" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                <field name="SELECT">vars.search</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="jM{(3_oG/jkV%kl@A[6m" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+            <mutation else="1" elseif="3"/>
+            <value name="IF0">
+              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="HP0Y0ZZ-gK9),T(ZJtf-" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                <mutation items="3"/>
+                <field name="OP1">OR</field>
+                <field name="OP2">OR</field>
+                <value name="ARG0">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="rr-gmJTOS.Y2A1ziw*G-" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="gS;ka;-C)w7=;_ZVk6(v" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="IwN!X.LCpN3Cf3C$E}_Q" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">Brasil</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="UOgOKONvNtD%VHe@}qSS" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="4n~wsBJ~W:@mdp~g04N%" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="6-lu[rg1%[$Ir~[SWF!T" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">brasil</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG2">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ym!B2/D4FF=a@k$(NO8}" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="#sE$jw;PqKOS]`9Z-8}." origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="=f3}/tXoAmo=d$|N,4a+" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">BRASIL</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="c7v*vYE0Q%S;#i$wu*Ac" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                <field name="SELECT">info</field>
+                <value name="MESSAGE">
+                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="){cuSgSS|63CY9GwfzNP" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">Bem vindo ao Brasil!</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".k?NL6`uZlRb8bq!4X-}" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                <mutation items="3"/>
+                <field name="OP1">OR</field>
+                <field name="OP2">OR</field>
+                <value name="ARG0">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="b1~~oZQr)n6n$j/ObQwk" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="P%)]S.0zX^3_*{N4%Zq9" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="pnF4Ubi206,v;@R3D6MR" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">Estados Unidos</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="P}x=zs=w2ys2#K9L/G`C" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="dnEkn#-1[IFLb|gzd3L4" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="+|}91-,^9}JL:+${t~wi" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">estados unidos</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG2">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="j;Oc7ptIM9p:EJ5Xr(w," origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="wejI{BNQEf.8XsL9hS;4" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".x-gMG=Z3zUTXuQ*);tC" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">ESTADOS UNIDOS</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="LWE+uDRRCqaluup[=nIN" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                <field name="SELECT">info</field>
+                <value name="MESSAGE">
+                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="rK2Tjqgk?M4?x37W|?KQ" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">Bem vindo ao USA!</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+            <value name="IF2">
+              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="`J2Npk:bkqAJ*SK53SWd" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                <mutation items="3"/>
+                <field name="OP1">OR</field>
+                <field name="OP2">OR</field>
+                <value name="ARG0">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="!9$is06nBxPqkhMIGsX?" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="#_4LTRnLhmn/rj2omy@%" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="COvgzOt9:8i5HxBD{s!`" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">Argentina</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="x;=L5`#r/2Vx2+[FXk]p" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Jt_{{#yuv0T;3mFShkqe" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="p~:7U:yun6q#v[Lo7*r*" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">argentina</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG2">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="V@J~t0@W7.,!^(?;u2Uw" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="J!:gu3wh$YX*]TI6a9?c" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="f~?%TG9a*?]%1zv!A8;4" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">ARGENTINA</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=":@2:$LsZZECG?j/)l*bO" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                <field name="SELECT">info</field>
+                <value name="MESSAGE">
+                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="+RXdTr/YnFS4BY,5$?Uq" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">Bem vindo a ARGENTINA!</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+            <value name="IF3">
+              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="_+jx]C%DpZ9jYX?4KY$$" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                <mutation items="3"/>
+                <field name="OP1">OR</field>
+                <field name="OP2">OR</field>
+                <value name="ARG0">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=")L;yslQ8X!r:DU{obrDK" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="eeyl=q1cvZ=h0Y?=?#7J" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="M;dn@P#6]gstKNtW)`e1" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">Chile</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="4u~jjdli$Ggc!C^jz@-[" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="*N|Vo~v3~!R4?@Z^LXSL" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="5:b@sOM.w0_OaPUb:z.;" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">chile</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG2">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Y@:v2fbJc-%k,cE+M-OG" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="IO@~5MpuAb^i-*1f,kqc" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="7FkBA/cfP%||3lQ:KK+O" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">CHILE</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO3">
+              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="rh5KMZ==AiZjDokEw5@v" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                <field name="SELECT">info</field>
+                <value name="MESSAGE">
+                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Rm|~N2tGqvx*2$Skpjr7" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">Bem vindo ao Brasil!</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="e(HjYy(73x9AZ}h~_jEe" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                <field name="SELECT">info</field>
+                <value name="MESSAGE">
+                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="gm@H+.QftNmkT,ZO/Ox#" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">Ok, você pesquisou por um país que não ESTÁ LISTADO. Continue usando</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="vxP%rmyJ5$OSjQPv$,jI" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+                <mutation else="1" elseif="3"/>
+                <value name="IF0">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="CFghj`xZ!9~6O9mnv7-5" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                    <mutation items="3"/>
+                    <field name="OP1">OR</field>
+                    <field name="OP2">OR</field>
+                    <value name="ARG0">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@q]}IdY%Q[2imXtJa:5$" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="4T~h/u+mUi[i=7aFyp,," origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="~f:k1jiu~qcrjF$caV,8" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Brasil</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="QKu,j25JgNDMo(wd%!*%" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="XP)8-tH{X+wA}[l*quS|" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="sfXx(DLOD;HA4Zn6%f;n" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">brasil</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG2">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="s?wEs|h1kv8Pk1-}Hn.|" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="#J1`2j76L$H0!_Istqfx" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="$_{dGIwa2joY|jut6cxs" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">BRASIL</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="oS{5PJ(m/^j6yiE%2gL8" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                    <field name="SELECT">info</field>
+                    <value name="MESSAGE">
+                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Ln6TVn=Dhz0w.rbKApR8" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">Bem vindo ao Brasil!</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF1">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="EVyIq:}.JorcHf?!$~rV" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                    <mutation items="3"/>
+                    <field name="OP1">OR</field>
+                    <field name="OP2">OR</field>
+                    <value name="ARG0">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="KwQz]AM/^7OkDj4Drcvg" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="{}Fkvnl-doe%iQ;tc_qK" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="45r1i+Dn]S6OTDMb%0t?" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Estados Unidos</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="7B1]AI7H[BB%4|D,5LuT" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=";p#fkU44T*goBh,b{=v|" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="YxP~*@zel?+;0ttrn!ee" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">estados unidos</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG2">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="2RSpm09k~[TsbcAsOPgx" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="4v}vT2Ok_}DX{X1AN;?s" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Fvsz.`:FY=Y5z8#{F31." origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">ESTADOS UNIDOS</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="i8S@/R=8H_IW`3iIWtpl" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                    <field name="SELECT">info</field>
+                    <value name="MESSAGE">
+                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ih?Fmp0,u]w|pA:[;sQL" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">Bem vindo ao USA!</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF2">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="3S4|^Xrjq@4U)C{?_GxK" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                    <mutation items="3"/>
+                    <field name="OP1">OR</field>
+                    <field name="OP2">OR</field>
+                    <value name="ARG0">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="8QuWV6M#yL{z3S!])rH:" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="b~%zM:!X--T`1~hlfj:(" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="b]Kt~diZ|f6h;=q6ck6O" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Argentina</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="R3s7|0I]OaG90YX~XBro" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="p@dm^[YLynty(v0ZugvS" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="mzT0=42EzZg1MmQS)yG$" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">argentina</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG2">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="9s2@}zB6[6uy~IjT!lz+" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".,UjOkrk;zqfC0nTEM2e" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="-5v1RYTj^^C6kHE}_lA9" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">ARGENTINA</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO2">
+                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=":qq.CU,,W6__SG4%R1|d" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                    <field name="SELECT">info</field>
+                    <value name="MESSAGE">
+                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="L.?DxF.QY)0%%%|MF;Hd" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">Bem vindo a ARGENTINA!</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF3">
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="d.`@+gj4TK!r051ztwWe" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                    <mutation items="3"/>
+                    <field name="OP1">OR</field>
+                    <field name="OP2">OR</field>
+                    <value name="ARG0">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="|:E3T6sr{;@--(r;oEoh" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="W~8pDHB/POw`antk]@V7" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="*u!5Oh$^E/:9ZT.lwdxE" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Chile</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="mNu$:!Ok:z7bg?Ep?O@O" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="pRt7%{YjC-8m|L/GC{b*" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@`#bsQP?LdcrM~J-=R0]" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">chile</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG2">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="t1MQ~0y}]aF/:b56v=b;" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="H$ck,f(G-PbCbEg?h?Y~" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="BX/~r2OEG!y$mu}#$^lq" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">CHILE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO3">
+                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="7:hH_X*WEeh3yoLkbKCV" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                    <field name="SELECT">info</field>
+                    <value name="MESSAGE">
+                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@UNZtt)Dk]o=DfMwUS{v" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">Bem vindo ao Brasil!</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="~Lp`hmCK5`d!K*)iS[lt" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                    <field name="SELECT">info</field>
+                    <value name="MESSAGE">
+                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="!58`%.xrK*+8pjU-I9Ip" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">Ok, você pesquisou por um país que não ESTÁ LISTADO. Continue usando</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Zt179A^UDseR6.ZN6jes" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+                    <mutation else="1" elseif="3"/>
+                    <value name="IF0">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="V$%+r@nEe:5+XeA$VPR." origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                        <mutation items="3"/>
+                        <field name="OP1">OR</field>
+                        <field name="OP2">OR</field>
+                        <value name="ARG0">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="L}*Q%sf#]KVfZStTB@2," origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".R)gZEPY9*p^M22(%B}L" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="fyk^+hi0`/xfw(fUKwi-" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">Brasil</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="sJ[z3|)i$M_]TOhzzf-8" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="7nWhOWJQ{p1ePM=R:r-^" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="68Gn+{)v..w!~2lG%|Np" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">brasil</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="iMR+K7JyUdTnV)@JFIzZ" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="~)Usp%PZ#A]]{:Pk]PhF" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="bVm#r4EpKJ.OP78Ff;ep" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">BRASIL</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="!%PlJ(uG:aoeF1:Dk)6Q" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                        <field name="SELECT">info</field>
+                        <value name="MESSAGE">
+                          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Ml]pKOiVJXL^]!=CZVki" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Bem vindo ao Brasil!</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <value name="IF1">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="5Kx|5BO%)9d3u?EqvYOi" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                        <mutation items="3"/>
+                        <field name="OP1">OR</field>
+                        <field name="OP2">OR</field>
+                        <value name="ARG0">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@T43jQjC.KgI^+%X260X" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="8z;60Ry;d(D?euWG{)|x" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="hK^2S4r,)rN^{s4Kn!3^" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">Estados Unidos</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="3Vy)kMT`UKH,qcsV@KGY" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=":-+C,zSM7kME8lwoX(e`" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?0(GzD6)e!sRDq)W(-X/" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">estados unidos</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="=erGxajxJBA3?eK1~9E{" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="/H`hU=S$(@r+:+W/wPU2" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="g(Hd6tyO*9@pB{_!nQAt" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">ESTADOS UNIDOS</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO1">
+                      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ckS,Rk7/]I}9PpWxg~Wv" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                        <field name="SELECT">info</field>
+                        <value name="MESSAGE">
+                          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="MI3s`c~f4u7Qr2FSL#R:" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Bem vindo ao USA!</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <value name="IF2">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}_D2swgiNx~)sA41FruQ" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                        <mutation items="3"/>
+                        <field name="OP1">OR</field>
+                        <field name="OP2">OR</field>
+                        <value name="ARG0">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="8b15AR_yxEosgf:J9eoe" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="U}O}T0U=1L|C.UX`egW*" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="W}kO+(*:_{|LxifVJ|/Q" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">Argentina</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="*,f%eU]1:hlLI)FcBGtJ" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="[4_O4.L~n?pSgEE:s}Mq" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="cA-cD~}^J].T59*Ad}+W" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">argentina</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="*zFQ-%^$smoS=]6RZ*(%" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="i.k;_`uNW}eBc04vQ{pb" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="sN?ih+(cQu`D7)b|)61k" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">ARGENTINA</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO2">
+                      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="|E1*5f6};SEuo/]{!w:p" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                        <field name="SELECT">info</field>
+                        <value name="MESSAGE">
+                          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="5v)7dMo4U}(,^pvxzJkA" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Bem vindo a ARGENTINA!</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <value name="IF3">
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@qd}g`x]q$SBXa#:j5~J" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                        <mutation items="3"/>
+                        <field name="OP1">OR</field>
+                        <field name="OP2">OR</field>
+                        <value name="ARG0">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="T?#$-LX7v;!$GX/`gam(" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="{SlE${z416cJnP1LMqPR" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="WpZksaLtq$QhDQ|sp22D" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">Chile</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="n|VCI(;}Y;5+yXH[LOwd" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="fLQ[ebuydks!)$@A9M[y" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="edwN=i%CZ0Au#KkI#Vo~" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">chile</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="{~iO.#MYpo,@Id4}cuTd" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="6R!Y6p+Fb3+S]#4P}VD/" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="K/B=BFh(x]mEt%:gC/ki" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">CHILE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO3">
+                      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="8IEc@Kdn.-N$Sl}U,u](" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                        <field name="SELECT">info</field>
+                        <value name="MESSAGE">
+                          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="67Q}z5sE))OiQ=uc3BX!" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Bem vindo ao Brasil!</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=",Dw1O-[uFiP2~e[KfVW0" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                        <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                        <field name="SELECT">info</field>
+                        <value name="MESSAGE">
+                          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="v$FGPqnT,eh=M_}n:2+^" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Ok, você pesquisou por um país que não ESTÁ LISTADO. Continue usando</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="El.#9Aa3dd{gq@fJeJ4$" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+                        <mutation else="1" elseif="3"/>
+                        <value name="IF0">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ae|ka`2+MpprFn3H@w2Z" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                            <mutation items="3"/>
+                            <field name="OP1">OR</field>
+                            <field name="OP2">OR</field>
+                            <value name="ARG0">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="u`n@|~QEo|~Ve-gn[T$Y" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="90,vtw4fVavK^AnEF@VW" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">item</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="NMWwg,V%%}JjCqIAeb#S" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">Brasil</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="hBMHo)2%VtES]Q$1]Ddk" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}H4%c]YwR~P*#_+3$tt^" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">item</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="^|~(T?0-6|/6:Es@p=(Z" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">brasil</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ARG2">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="G.b=33{t*Y?D08At~0pA" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Hf9J54He:;^Z!WoJ7UNO" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">item</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="We)=o/*ULhck=B]1p[,@" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">BRASIL</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="jU[aAocEq]MA9$3+IU#R" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                            <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                            <field name="SELECT">info</field>
+                            <value name="MESSAGE">
+                              <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="s]s%]AtD8%T#;l]o9yDj" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">Bem vindo ao Brasil!</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                        <value name="IF1">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="aOJ,1o[U8UvN)LnmW0Eq" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                            <mutation items="3"/>
+                            <field name="OP1">OR</field>
+                            <field name="OP2">OR</field>
+                            <value name="ARG0">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="e~*E?Zj(_B]iBbD=#UjV" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="3GseZ@KLA]uyLFyiK4Ht" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">item</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="/#:K])?y:[r1AH2WiS-[" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">Estados Unidos</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="$Mz{Q:@(QKhXai$:{Az?" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="r)LyP!+.p2#:@)7Mtzc4" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">item</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="~H,CLb;txZ*If?0P#z]N" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">estados unidos</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ARG2">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="/svdE5AAuRk=A~pV})Co" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="f{uYEY$w,+];0xIL8+rw" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">item</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="v_8P5DB_pX4Y@3Bw~g3I" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">ESTADOS UNIDOS</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO1">
+                          <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="XW,A,*WVKFeRN.MM@d6b" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                            <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                            <field name="SELECT">info</field>
+                            <value name="MESSAGE">
+                              <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="FlI%3?DwI_lS!V%m7]~w" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">Bem vindo ao USA!</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                        <value name="IF2">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="lE2Ci6TuFok]X4dw^9F=" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                            <mutation items="3"/>
+                            <field name="OP1">OR</field>
+                            <field name="OP2">OR</field>
+                            <value name="ARG0">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="{m7/37kLwwSFZ)+zX=D%" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="(s:qi=*[[^5+.:*fB^|r" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">item</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="UY+pOnkZGj)bF3//]t50" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">Argentina</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="sH7*Uz7($=c%vF!BAMUm" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="6*S=kQb#~gyP|cve($DM" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">item</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="7z2,vh3ArN7}}e@l}VY`" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">argentina</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ARG2">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="GrV(WrxFRv_n:_^{]-LP" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?Ey)gK[0ZWZyD,]c71wX" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">item</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="KP1f}Ym?:yL7^!EQSitZ" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">ARGENTINA</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO2">
+                          <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="3_!F3pTuU5(*4I2T4h^K" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                            <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                            <field name="SELECT">info</field>
+                            <value name="MESSAGE">
+                              <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".=LW+0Fjmz?S{./+#GcL" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">Bem vindo a ARGENTINA!</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                        <value name="IF3">
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="0MI8$3jIen`lj/TIO),H" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                            <mutation items="3"/>
+                            <field name="OP1">OR</field>
+                            <field name="OP2">OR</field>
+                            <value name="ARG0">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%NOBh.bnjypM9P_^6tcX" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="vvzy0KansX`u%q5!PK6$" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">item</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="!$bpXE)Dq:_OAR4es-,P" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">Chile</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="KGCt7Ir_GO9;[X_]FB}{" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="MH+_=U=,N#O^!)^:68!_" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">item</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="WchOzE4AAx/4BpG^6,RD" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">chile</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ARG2">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="(%Slx9+9oPG(|XRuV8H`" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="_q{X`TKv[3h=09Q*$@J(" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                    <field name="VAR">item</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="yDcU8kwIj7G[K2`j7CzP" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">CHILE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO3">
+                          <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="xG|wjtq{2gP3NW86078Q" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                            <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                            <field name="SELECT">info</field>
+                            <value name="MESSAGE">
+                              <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="lPm{YZtOd!9~jA;nTRt+" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">Bem vindo ao Brasil!</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="E}%1xmD_Jcm]Y(W$a0;[" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                            <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                            <field name="SELECT">info</field>
+                            <value name="MESSAGE">
+                              <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="J*`rHR*_I@;0T@eG(S28" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">Ok, você pesquisou por um país que não ESTÁ LISTADO. Continue usando</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="d8W^PvY396p+?lB%YK:@" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+                            <mutation else="1" elseif="3"/>
+                            <value name="IF0">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Brx/+,sbv+X#^We+%W(E" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                                <mutation items="3"/>
+                                <field name="OP1">OR</field>
+                                <field name="OP2">OR</field>
+                                <value name="ARG0">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="p|J#{wy{Cv*I=4]]}kB!" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="OTpKChP?)N[-9M^wK/ce" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field name="VAR">item</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@+edr|/f_{6!_vfJ,*5e" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">Brasil</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="HT9?--Hk7l!iMa)WfFYj" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="NevJx6XE7E!j~FkJ@_Lt" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field name="VAR">item</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="K]EbTBgMDd|.@v?jd_V;" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">brasil</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ARG2">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="#OImm1#dv(Bwe4}:HSnA" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Eu9bgc|VC09$^t-x!Y;@" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field name="VAR">item</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="RTp;K]=]rZJ=jitiO*2:" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">BRASIL</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="jGxW%yATY7|`uOaTr;JI" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                                <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                                <field name="SELECT">info</field>
+                                <value name="MESSAGE">
+                                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="l#0P/m5g$I2lb%=A~w+y" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">Bem vindo ao Brasil!</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
+                            <value name="IF1">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Bt$H-}WU4WwX~e_,7g!_" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                                <mutation items="3"/>
+                                <field name="OP1">OR</field>
+                                <field name="OP2">OR</field>
+                                <value name="ARG0">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="5hINQXk7F_P=|m[m9Bg." origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="2N6cBMP6AO$OR@:FvN8S" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field name="VAR">item</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="rG%4ax3yNZ|QaD1zM-TZ" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">Estados Unidos</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="S2vBh%9h}=EFcvRf+V9l" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ApPrreIBDy2{BD!A.BV9" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field name="VAR">item</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="I:+3|+/i{A$n-59a]-Ez" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">estados unidos</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ARG2">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="r7mD5kK%gFjw0pBT6IZ1" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Dd/$/@$sL`6q3pO*ZW.N" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field name="VAR">item</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@C92;]T0s?$yUd;sRbY;" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">ESTADOS UNIDOS</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO1">
+                              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@*xjK%68DEy^!}gzUt1Y" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                                <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                                <field name="SELECT">info</field>
+                                <value name="MESSAGE">
+                                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="no=ma5jjYOzj.IBK#Lo6" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">Bem vindo ao USA!</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
+                            <value name="IF2">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=":|eK@q-rVy}+f35WV8B/" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                                <mutation items="3"/>
+                                <field name="OP1">OR</field>
+                                <field name="OP2">OR</field>
+                                <value name="ARG0">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="vGN8pOd(8[sTYkLn::rU" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="er/R?}GWQ:|1l;UBd*^g" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field name="VAR">item</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="t!ELuuNYIw]O+V:x#.j%" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">Argentina</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="dZ.*{;IE[3C8Ktebh-yg" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="F=nFUTAg9Adlwz3.MyR8" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field name="VAR">item</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="/gMa@gKncY8%e`y?|@`[" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">argentina</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ARG2">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="SFrC9~XG-UX,?52V|_(H" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="A@TA66|D=3os2}F63e!R" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field name="VAR">item</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="z]0|!uCK?.pSVmS[0Dr*" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">ARGENTINA</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO2">
+                              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="XdOUY$Ow@xtK}YOQ)+@j" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                                <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                                <field name="SELECT">info</field>
+                                <value name="MESSAGE">
+                                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="k{]N0cwIm]800N+Um`{=" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">Bem vindo a ARGENTINA!</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
+                            <value name="IF3">
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="`paq([,:tK~lhmgq8OV9" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                                <mutation items="3"/>
+                                <field name="OP1">OR</field>
+                                <field name="OP2">OR</field>
+                                <value name="ARG0">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="dI;p(/JsKTtCgoTC1%_," origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Z*V`.2)*xJMFtq,BoHI#" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field name="VAR">item</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="1JDb4LhwHse}roL%wUZF" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">Chile</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="e0H|ACcCuY,FH81,!Hz`" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="(v3zu+~tC0~B%/[yD~v~" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field name="VAR">item</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=":0LxZLw3NX_$/pEl4qDi" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">chile</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ARG2">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="yx`m!Fcc{HISJ)!.IsI:" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="^}^/+d6Pg47Aw=*X#_CO" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                        <field name="VAR">item</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="32vGBQo{]]~:?Ra#Nb07" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">CHILE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO3">
+                              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="SmgY-ROymzPAy]B`bM_m" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                                <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                                <field name="SELECT">info</field>
+                                <value name="MESSAGE">
+                                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="{rwpREOIkR@0=50-Tx!@" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">Bem vindo ao Brasil!</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
+                            <statement name="ELSE">
+                              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="/$Ek2$e8Ldm3:8bgQzJ3" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                                <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                                <field name="SELECT">info</field>
+                                <value name="MESSAGE">
+                                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="oAvysx@]N$~r]n7z5??e" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                    <field name="TEXT">Ok, você pesquisou por um país que não ESTÁ LISTADO. Continue usando</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="1R5,_U8o8$Is37:gZ(^o" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+                                <mutation else="1" elseif="3"/>
+                                <value name="IF0">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%}PrY|M%]59@Dz|YY70g" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                                    <mutation items="3"/>
+                                    <field name="OP1">OR</field>
+                                    <field name="OP2">OR</field>
+                                    <value name="ARG0">
+                                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="+Dc66OPw?R52}-@ml3EE" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="y*=A8z[Kt`n26Y/?XS#-" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                            <field name="VAR">item</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="nAq~yAjZ1l(0WU`BswIy" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                            <field name="TEXT">Brasil</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="zlA__tvDk8At]bhPr5%`" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="wWQp-wi.GgA!eyQk%ohp" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                            <field name="VAR">item</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="$ypb?t@aqnbB!*7+HZlx" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                            <field name="TEXT">brasil</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="ARG2">
+                                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Wl]a2~Zfw=aOBeCM_kC=" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="h^Rb@f!.e5#i5r5*jwP1" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                            <field name="VAR">item</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?foJU2mKH]4|Hy-`tphM" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                            <field name="TEXT">BRASIL</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="#vCR=S8Oo|+wSEVydd(x" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                                    <field name="SELECT">info</field>
+                                    <value name="MESSAGE">
+                                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="pN7g}W{*Ysg8#2@-g{;g" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">Bem vindo ao Brasil!</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <value name="IF1">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="zxX@TRW/H^w+C2~8-(qS" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                                    <mutation items="3"/>
+                                    <field name="OP1">OR</field>
+                                    <field name="OP2">OR</field>
+                                    <value name="ARG0">
+                                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="[{k[`t[:PetNC##Nuk`W" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="^s|;vZ#78.$jkQ[N/nQR" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                            <field name="VAR">item</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="EzIDKRMTjX-$+%[oD^le" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                            <field name="TEXT">Estados Unidos</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="fbxr3obLJ3!S}ru^Q=Pj" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="jyc};([)YM.OC5a9;@~x" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                            <field name="VAR">item</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="B)cK]`jZOlMXAQvpk/#V" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                            <field name="TEXT">estados unidos</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="ARG2">
+                                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="813x/:Ae(/(+|?QP{#c9" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="1DJLKiEUK@B[%K3+8YcD" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                            <field name="VAR">item</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=":0hrpfwU$OaB$Wpy_BSE" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                            <field name="TEXT">ESTADOS UNIDOS</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO1">
+                                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="7M~!M#,/J{c}*vNm}ip=" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                                    <field name="SELECT">info</field>
+                                    <value name="MESSAGE">
+                                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%`v[B9P|m83d:i~%ojVM" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">Bem vindo ao USA!</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <value name="IF2">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="BB_U!?,f1h8^H9U[]5%Z" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                                    <mutation items="3"/>
+                                    <field name="OP1">OR</field>
+                                    <field name="OP2">OR</field>
+                                    <value name="ARG0">
+                                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="vvLWq!8_r}ERXf.qOSoE" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="e(+K*lDy1le`:[.)e6vX" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                            <field name="VAR">item</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="3j1s9.m~6!7KA9[cWc)]" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                            <field name="TEXT">Argentina</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="MEH_@ov|3ceYHKBTcVH." origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="cem(BK`2_%qyw$/l6Su;" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                            <field name="VAR">item</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="i7I4ZTU9l$Fa/%@eY)|o" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                            <field name="TEXT">argentina</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="ARG2">
+                                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="qeT]pk$]`3j+fITO9XC6" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="k.KKOCX48TH2VJ=$I?A[" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                            <field name="VAR">item</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="UwO%jZrEft81pC,:fgrU" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                            <field name="TEXT">ARGENTINA</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO2">
+                                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="J/f9l$6Ug$YS[|3D.%AD" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                                    <field name="SELECT">info</field>
+                                    <value name="MESSAGE">
+                                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="rr`pTLr~)-gx2;7J3ugj" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">Bem vindo a ARGENTINA!</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <value name="IF3">
+                                  <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="NZowHc8e5j*?+nkHeKTd" origintype="logic_operation" output="true" tooltip="Retorna verdadeiro se ambas as entradas forem iguais." type="logic_operation">
+                                    <mutation items="3"/>
+                                    <field name="OP1">OR</field>
+                                    <field name="OP2">OR</field>
+                                    <value name="ARG0">
+                                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="mo.rgrb*s|2oFN8a1X:9" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="YB|uI+r,Z8Pk6pu1jdp3" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                            <field name="VAR">item</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=".sO1wfMXDZpSP2MR-0oR" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                            <field name="TEXT">Chile</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="jp62+vyxxJy_,`mB+DC@" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?|=n9h;le2`($%;|6Px-" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                            <field name="VAR">item</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="COc`8%e+@pwHuq7*,~.{" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                            <field name="TEXT">chile</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="ARG2">
+                                      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="xV/;_S2dDx`6;HM.kD^s" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="hB0e*OArpyEEpf_)fdRB" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                                            <field name="VAR">item</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="VBpxt]evdvG-=atpNH9m" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                            <field name="TEXT">CHILE</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO3">
+                                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="^R_OYY3~{5%|NZnPYG~H" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                                    <field name="SELECT">info</field>
+                                    <value name="MESSAGE">
+                                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@AS4!DN1iKOuZNjwxo8K" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">Bem vindo ao Brasil!</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <statement name="ELSE">
+                                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="u@wgr+iU6M-=uyq}tGsD" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+                                    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+                                    <field name="SELECT">info</field>
+                                    <value name="MESSAGE">
+                                      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="o]z8(-nbD;Chg_6;(e2]" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                        <field name="TEXT">Ok, você pesquisou por um país que não ESTÁ LISTADO. Continue usando</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="MOiad?1KrRGHjNVT*SMN" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type" x="76" y="1564">
+    <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+    <field name="SELECT">info</field>
+    <value name="MESSAGE">
+      <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="s?/Kg!L_8dX]oT|dZg7;" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field name="TEXT">Ok, você pesquisou por um país que não ESTÁ LISTADO. Continue usando</field>
+      </shadow>
+    </value>
+  </block>
+</blockly>
