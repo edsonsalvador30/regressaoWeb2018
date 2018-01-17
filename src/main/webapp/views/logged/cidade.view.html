@@ -1,4 +1,4 @@
-<h3>Cidade</h3>
+<h3>Cidade 2</h3>
 
 <!-- div row para pesquisa -->
 <!--<div class="row">-->
@@ -73,22 +73,14 @@
                 <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
                 <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
             </div>
-            <br/>
+            <br>
             <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
 
                 <div data-component="crn-textinput" id="crn-textinput-nome" class="">
                     <div class="form-group">
                         <label for="textinput-nome" class="">Nome</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <input
-                                            type="text"
-                                            ng-model="Cidade.active.nome"
-                                            class="form-control"
-                                            id="textinput-nome"
-                                            placeholder="Nome"
-                                            mask=""
-                                            mask-placeholder=""
-                                            ng-required="false">
+                                <input type="text" ng-model="Cidade.active.nome" class="form-control" id="textinput-nome" placeholder="Nome" mask="" mask-placeholder="" ng-required="false">
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
@@ -102,7 +94,7 @@
                                     <ui-select-match class="" placeholder="Select...">
                                         {{$select.selected.nome}}
                                     </ui-select-match>
-                                    <ui-select-choices  repeat="rowData in datasource.data | filter : $select.search" class="" refresh="" refresh-deplay="">
+                                    <ui-select-choices repeat="rowData in datasource.data | filter : $select.search" class="" refresh="" refresh-deplay="">
                                         <div class="" data-container="true">
                                             {{rowData.nome}}
                                         </div>
