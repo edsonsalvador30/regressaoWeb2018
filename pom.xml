@@ -151,16 +151,6 @@
             <version>2.8.0</version>
         </dependency>
         <dependency>
-            <groupId>io.cronapp</groupId>
-            <artifactId>cronapp-framework-java</artifactId>
-            <version>0.0.38-d-s-b</version>
-        </dependency>
-        <dependency>
-            <groupId>io.cronapp</groupId>
-            <artifactId>cronapp-reports-exec</artifactId>
-            <version>0.0.16-d-s-b</version>
-        </dependency>
-        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.35</version>
@@ -168,15 +158,25 @@
         <dependency>
             <groupId>io.cronapp</groupId>
             <artifactId>cronapi-java</artifactId>
-            <version>0.0.129-d-s</version>
+            <version>0.0.130-d-s-b</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cronapp</groupId>
+            <artifactId>cronapp-framework-java</artifactId>
+            <version>0.0.41-d-s-b</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cronapp</groupId>
+            <artifactId>cronapp-reports-exec</artifactId>
+            <version>0.0.17-d-s-b</version>
         </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <project.cronospass.resource mimetype="folder/src">src/main/java</project.cronospass.resource>
         <project.cronospass.resource mimetype="folder/servercontext">config</project.cronospass.resource>
         <project.cronospass.resource mimetype="folder/libs">lib</project.cronospass.resource>
+        <project.cronospass.resource mimetype="folder/src">src/main/java</project.cronospass.resource>
         <project.cronospass.resource mimetype="folder/web">src/main/webapp</project.cronospass.resource>
     </properties>
 </project>
