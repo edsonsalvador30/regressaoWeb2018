@@ -6,7 +6,7 @@
     <div ng-hide="Pais.inserting || Pais.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class="">
         <div class="form-group">
             <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
-            <input type="text" ng-model="vars.search" cronapp-filter="nome;" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="Pais" class="form-control" value="" placeholder="{{'template.crud.search' | translate}}">
+            <input type="text" ng-model="vars.search" cronapp-filter="nome;" cronapp-filter-operator="=" cronapp-filter-autopost="true" crn-datasource="Pais" class="form-control" value="" placeholder="{{'template.crud.search' | translate}}" ng-blur="cronapi.util.makeCallServerBlocklyAsync('blockly.Bloco:Executar', null, null)">
         </div>
     </div>
 
@@ -65,22 +65,14 @@
                 <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
                 <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
             </div>
-            <br/>
+            <br>
             <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
 
                 <div data-component="crn-textinput" id="crn-textinput-nome" class="">
                     <div class="form-group">
                         <label for="textinput-nome" class="">Nome</label>
  <!-- else for if !model.hasCronappFramework() -->
-                                <input
-                                            type="text"
-                                            ng-model="Pais.active.nome"
-                                            class="form-control"
-                                            id="textinput-nome"
-                                            placeholder="Nome"
-                                            mask=""
-                                            mask-placeholder=""
-                                            ng-required="false">
+                                <input type="text" ng-model="Pais.active.nome" class="form-control" id="textinput-nome" placeholder="Nome" mask="" mask-placeholder="" ng-required="false">
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
@@ -128,7 +120,7 @@
                                                 </td>
                                         <td>
                                             <div>
-                                                <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.startEditing(rowData)" onclick="$('#modalEstadoGrid').modal('show');" ><i class="fa fa-edit"></i></button>
+                                                <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.startEditing(rowData)" onclick="$('#modalEstadoGrid').modal('show');"><i class="fa fa-edit"></i></button>
                                                 <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
@@ -136,7 +128,7 @@
                                     </tbody>
                                 </table>
                                 <div class="table-footer-controls">
-                                    <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()" content="{{&quot;template.crud.load_more&quot; | translate}}...">{{"template.crud.load_more" | translate}}...</button>
+                                    <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
                                 </div>
                             </div>
                         </div>
@@ -165,16 +157,10 @@
 
 <!-- else of !model.hasCronappFramework() -->
 
-                                    <div data-component="crn-textinput"  id="crn-textinput-nome" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div data-component="crn-textinput" id="crn-textinput-nome" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <div class="form-group">
                                             <label for="textinput-nome">Nome</label>
-                                                <input type="text"
-                                                       ng-model="EstadoGrid.active.nome" class="form-control"
-                                                       id="textinput-nome"
-                                                       placeholder="Nome"
-                                                       mask=""
-                                                       mask-placeholder=""
-                                                    ng-required="false">
+                                                <input type="text" ng-model="EstadoGrid.active.nome" class="form-control" id="textinput-nome" placeholder="Nome" mask="" mask-placeholder="" ng-required="false">
                                         </div>
                                     </div>
                              <!-- end if !model.hasCronappFramework() -->
