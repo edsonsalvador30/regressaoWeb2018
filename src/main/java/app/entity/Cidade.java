@@ -10,7 +10,7 @@ import cronapi.rest.security.CronappSecurity;
 
 
 /**
- * Classe que representa a tabela CIDADE
+ * Classe que representa a tabela CIDADE Edson
  * @generated
  */
 @Entity

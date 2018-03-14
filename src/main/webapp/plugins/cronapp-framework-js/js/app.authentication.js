@@ -15,7 +15,8 @@ var cronappModules = [
   'ui.bootstrap',
   'ngFileUpload',
   'report.services',
-  'upload.services'
+  'upload.services',
+  'summernote'
 ];
 
 if (window.customModules) {
@@ -25,13 +26,13 @@ if (window.customModules) {
 var app = (function() {
 
   return angular.module('MyApp', cronappModules)
-
       .constant('LOCALES', {
         'locales': {
           'pt_br': 'Portugues (Brasil)',
           'en_us': 'English'
         },
-        'preferredLocale': 'pt_br'
+        'preferredLocale': 'pt_br',
+        'urlPrefix': ''
       })
       .config([
         '$httpProvider',
@@ -66,13 +67,28 @@ var app = (function() {
           positionX: 'right',
           positionY: 'top'
         });
-
+        
+        if (window.customStateProvider) {
+          window.customStateProvider($stateProvider);
+        }
+        else {
         // Set up the states
-        $stateProvider
-
+          $stateProvider
             .state('login', {
               url: "",
               controller: 'LoginController',
+              templateUrl: 'views/login.view.html'
+            })
+
+            .state('social', {
+              url: "/connected",
+              controller: 'SocialController',
+              templateUrl: 'views/login.view.html'
+            })
+
+            .state('socialError', {
+              url: "/notconnected",
+              controller: 'SocialController',
               templateUrl: 'views/login.view.html'
             })
 
@@ -135,11 +151,23 @@ var app = (function() {
                 return 'views/error/403.view.html';
               }
             });
+        }
 
         // For any unmatched url, redirect to /state1
         $urlRouterProvider.otherwise("/error/404");
       })
-
+      .factory('originPath', ['$location', function($location) {  
+        var originPath = {
+            request: function(config) {
+                config.headers['origin-path'] = $location.path();
+                return config;
+            }
+        };
+        return originPath;
+      }])
+    	.config(['$httpProvider', function($httpProvider) {  
+    	    $httpProvider.interceptors.push('originPath');
+      }])
       .config(function($translateProvider, tmhDynamicLocaleProvider) {
 
         $translateProvider.useMissingTranslationHandlerLog();
@@ -236,7 +264,10 @@ var app = (function() {
 
         $scope.registerComponentScripts();
 
-        try { $controller('AfterPageController', { $scope: $scope }); } catch(e) {};
+        try { 
+          var contextAfterPageController = $controller('AfterPageController', { $scope: $scope });  
+          app.copyContext(contextAfterPageController, this, 'AfterPageController');
+        } catch(e) {};
         try { if ($scope.blockly.events.afterPageRender) $scope.blockly.events.afterPageRender(); } catch(e) {};
       })
 
@@ -305,6 +336,17 @@ app.registerEventsCronapi = function($scope, $translate) {
     console.info('Not loaded blockly functions');
     console.info(e);
   }
+};
+
+app.copyContext = function(fromContext, toContext, controllerName) {
+	if (fromContext) {
+  	for (var item in fromContext) {
+  	  if (!toContext[item])
+  	    toContext[item] = fromContext[item];
+  	  else 
+  	    toContext[item+controllerName] = fromContext[item];
+  	}
+	}
 };
 
 window.safeApply = function(fn) {

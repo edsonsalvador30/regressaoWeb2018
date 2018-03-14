@@ -194,7 +194,7 @@
             var field = splitedNgModel[splitedNgModel.length-1];
             var number = Math.floor((Math.random() * 1000) + 20);
             var content = element.html();
-            
+
             var maxFileSize = "";
             if (attr.maxFileSize)
               maxFileSize = attr.maxFileSize;
@@ -229,9 +229,9 @@
                 .split('$required$').join(required)
                 .split('$userHtml$').join(content)
                 .split('$maxFileSize$').join(maxFileSize)
-                
-                );            
-                                
+
+            );
+
             element.html(templateDyn);
             $compile(templateDyn)(element.scope());
           }
@@ -315,7 +315,7 @@
                 elem.on('click', function() {
                   scope.$apply(function() {
                     var datasource = eval(crnDatasource.attr('crn-datasource'));
-                    datasource.active = scope.rowData; 
+                    datasource.active = scope.rowData;
                   });
                 });
               }
@@ -387,6 +387,119 @@
           }
         }
       })
+	  
+	.directive('qr', ['$window', function($window){
+    return {
+      restrict: 'A',
+      require: '^ngModel',
+      template: '<canvas ng-hide="image"></canvas><img ng-if="image" ng-src="{{canvasImage}}"/>',
+      link: function postlink(scope, element, attrs, ngModel){
+        if (scope.size === undefined  && attrs.size) {
+          scope.text = attrs.size;
+        }
+      var getTypeNumeber = function(){
+      return scope.typeNumber || 0;
+    };
+    var getCorrection = function(){
+      var levels = {
+        'L': 1,
+        'M': 0,
+        'Q': 3,
+        'H': 2
+      };
+    var correctionLevel = scope.correctionLevel || 0;
+      return levels[correctionLevel] || 0;
+    };
+    var getText = function(){
+      return ngModel.$modelValue || "";
+    };
+    var getSize = function(){
+      return scope.size || $(element).outerWidth();
+    };
+    var isNUMBER = function(text){
+      var ALLOWEDCHARS = /^[0-9]*$/;
+      return ALLOWEDCHARS.test(text);
+    };
+    var isALPHA_NUM = function(text){
+      var ALLOWEDCHARS = /^[0-9A-Z $%*+\-./:]*$/;
+      return ALLOWEDCHARS.test(text);
+    };
+    var is8bit = function(text){
+      for (var i = 0; i < text.length; i++) {
+        var code = text.charCodeAt(i);
+        if (code > 255) {
+          return false;
+        }
+      }
+      return true;
+    };
+    var checkInputMode = function(inputMode, text){
+      if (inputMode === 'NUMBER' && !isNUMBER(text)) {
+        throw new Error('The `NUMBER` input mode is invalid for text.');
+      }
+      else if (inputMode === 'ALPHA_NUM' && !isALPHA_NUM(text)) {
+        throw new Error('The `ALPHA_NUM` input mode is invalid for text.');
+      }
+      else if (inputMode === '8bit' && !is8bit(text)) {
+        throw new Error('The `8bit` input mode is invalid for text.');
+      }
+      else if (!is8bit(text)) {
+        throw new Error('Input mode is invalid for text.');
+      }
+      return true;
+    };
+    var getInputMode = function(text){
+      var inputMode = scope.inputMode;
+      inputMode = inputMode || (isNUMBER(text) ? 'NUMBER' : undefined);
+      inputMode = inputMode || (isALPHA_NUM(text) ? 'ALPHA_NUM' : undefined);
+      inputMode = inputMode || (is8bit(text) ? '8bit' : '');
+      return checkInputMode(inputMode, text) ? inputMode : '';
+    };
+    var canvas = element.find('canvas')[0];
+    var canvas2D = !!$window.CanvasRenderingContext2D;
+    scope.TYPE_NUMBER = getTypeNumeber();
+    scope.TEXT = getText();
+    scope.CORRECTION = getCorrection();
+    scope.SIZE = getSize();
+    scope.INPUT_MODE = getInputMode(scope.TEXT);
+    scope.canvasImage = '';
+    var draw = function(context, qr, modules, tile){
+      for (var row = 0; row < modules; row++) {
+        for (var col = 0; col < modules; col++) {
+          var w = (Math.ceil((col + 1) * tile) - Math.floor(col * tile)),
+              h = (Math.ceil((row + 1) * tile) - Math.floor(row * tile));
+          context.fillStyle = qr.isDark(row, col) ? '#000' : '#fff';
+          context.fillRect(Math.round(col * tile), Math.round(row * tile), w, h);
+        }
+      }
+    };
+    var render = function(canvas, value, typeNumber, correction, size, inputMode){
+      var trim = /^\s+|\s+$/g;
+      var text = value.replace(trim, '');
+      var qr = new QRCode(typeNumber, correction, inputMode);
+      qr.addData(text);
+      qr.make();
+      var context = canvas.getContext('2d');
+      var modules = qr.getModuleCount();
+      var tile = size / modules;
+      canvas.width = canvas.height = size;
+      if (canvas2D) {
+        draw(context, qr, modules, tile);
+        scope.canvasImage = canvas.toDataURL() || '';
+      }
+    };
+    
+    scope.$watch(function(){return ngModel.$modelValue}, function(value, old){
+    if (value !== old) {
+      scope.text = ngModel.$modelValue;
+      scope.TEXT = getText();
+      scope.INPUT_MODE = getInputMode(scope.TEXT);
+      render(canvas, scope.TEXT, scope.TYPE_NUMBER, scope.CORRECTION, scope.SIZE, scope.INPUT_MODE);
+    }
+  });
+    render(canvas, scope.TEXT, scope.TYPE_NUMBER, scope.CORRECTION, scope.SIZE, scope.INPUT_MODE);
+    }};
+  }])
 
       .directive('uiSelect', function ($compile) {
         return {
@@ -453,7 +566,7 @@
 
             if (index > -1)
               filters.splice(index, 1);
-            
+
             if (bindedFilter.length > 0) {
               var bindedFilterJson = {
                 "ngModel" : ngModel,
@@ -463,7 +576,7 @@
             }
             button.data('filters', filters);
           },
-          makeAutoPostSearch: function($element, bindedFilter, datasource) {
+          makeAutoPostSearch: function($element, bindedFilter, datasource, attrs) {
             var fieldset = $element.closest('fieldset');
             if (fieldset && fieldset.length > 0) {
               var button = fieldset.find('button[cronapp-filter]');
@@ -472,12 +585,12 @@
                 if (filters && filters.length > 0) {
                   bindedFilter = '';
                   $(filters).each(function() {
-                      bindedFilter += this.bindedFilter+";";
+                    bindedFilter += this.bindedFilter+";";
                   });
                 }
               }
             }
-            datasource.search(bindedFilter);
+            datasource.search(bindedFilter, (attrs.cronappFilterCaseinsensitive=="true"));
           },
           inputBehavior: function(scope, element, attrs, ngModelCtrl, $element, typeElement, operator, autopost) {
             var filterTemplate = '';
@@ -529,10 +642,10 @@
                 var bindedFilter = filterTemplate.split('{value}').join(value);
                 if (ngModelCtrl.$viewValue.length == 0)
                   bindedFilter = '';
-                
+
                 selfDirective.setFilterInButton($element, bindedFilter, operator);
                 if (autopost)
-                  selfDirective.makeAutoPostSearch($element, bindedFilter, datasource);
+                  selfDirective.makeAutoPostSearch($element, bindedFilter, datasource, attrs);
 
               });
             }
@@ -551,7 +664,7 @@
 
                   selfDirective.setFilterInButton($element, bindedFilter, operator);
                   if (autopost)
-                    selfDirective.makeAutoPostSearch($element, bindedFilter, datasource);
+                    selfDirective.makeAutoPostSearch($element, bindedFilter, datasource, attrs);
                 });
               }
               else {
@@ -584,7 +697,7 @@
 
                   selfDirective.setFilterInButton($element, bindedFilter, operator);
                   if (autopost)
-                    selfDirective.makeAutoPostSearch($element, bindedFilter, datasource);
+                    selfDirective.makeAutoPostSearch($element, bindedFilter, datasource, attrs);
                 });
               }
             }
@@ -602,11 +715,11 @@
               if (datasourceName && datasourceName.length > 0 && filters) {
                 var bindedFilter = '';
                 $(filters).each(function() {
-                    bindedFilter += this.bindedFilter+";";
+                  bindedFilter += this.bindedFilter+";";
                 });
-                
+
                 var datasourceToFilter = eval(datasourceName);
-                datasourceToFilter.search(bindedFilter);
+                datasourceToFilter.search(bindedFilter, (attrs.cronappFilterCaseinsensitive=="true"));
               }
             });
           },
