@@ -12,7 +12,7 @@ public class Bloco2 {
 
 	/**
 	 *
-	 * @return Var
+	 * @return Var Edson
 	 */
 	// Bloco2
 	public static Var Executar2() throws Exception {
